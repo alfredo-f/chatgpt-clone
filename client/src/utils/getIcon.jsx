@@ -13,7 +13,7 @@ const getIcon = props => {
       <div
         title="User"
         style={{
-          background: 'radial-gradient(circle at 90% 110%, rgb(1 43 128), rgb(17, 139, 161))',
+          background: 'radial-gradient(circle at 90% 126%, rgb(118 133 0), rgb(70 234 243))',
           color: 'white',
           fontSize: 12,
           width: size,
@@ -21,7 +21,7 @@ const getIcon = props => {
         }}
         className={`relative flex items-center justify-center rounded-sm text-white ` + props?.className}
       >
-        User
+        AF
       </div>
     );
   else if (!isCreatedByUser) {

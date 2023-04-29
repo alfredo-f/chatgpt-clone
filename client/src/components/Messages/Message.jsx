@@ -115,7 +115,7 @@ export default function Message({
         {...props}
         onWheel={handleWheel}
       >
-        <div className="relative m-auto flex gap-4 p-4 text-base md:max-w-2xl md:gap-6 md:py-6 lg:max-w-2xl lg:px-0 xl:max-w-3xl">
+        <div className="relative m-auto flex gap-4 p-4 text-base md:max-w-6xl md:gap-6 md:py-6 lg:max-w-6xl lg:px-6 xl:max-w-6xl">
           <div className="relative flex h-[30px] w-[30px] flex-col items-end text-right text-xs md:text-sm">
             {typeof icon === 'string' && icon.match(/[^\\x00-\\x7F]+/) ? (
               <span className=" direction-rtl w-40 overflow-x-scroll">{icon}</span>

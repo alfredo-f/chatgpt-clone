@@ -136,7 +136,7 @@ export default function Nav({ navVisible, setNavVisible }) {
     <>
       <div
         className={
-          'nav dark bg-gray-900 md:fixed md:inset-y-0 md:flex md:w-[260px] md:flex-col' +
+          'nav dark bg-gray-900 md:fixed md:inset-y-0 md:flex md:w-[170px] md:flex-col' +
           (navVisible ? ' active' : '')
         }
       >
