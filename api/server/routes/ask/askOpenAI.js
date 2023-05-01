@@ -63,7 +63,7 @@ router.post('/', async (req, res) => {
   };
 
   const availableModels = getOpenAIModels();
-  if (availableModels.find((model) => model === endpointOption.model) === undefined)
+  if (availableModels.find(model => model === endpointOption.model) === undefined)
     return handleError(res, { text: 'Illegal request: model' });
 
   console.log('ask log', {
@@ -247,7 +247,7 @@ const ask = async ({
     res.end();
 
     if (userParentMessageId == '00000000-0000-0000-0000-000000000000') {
-      const title = await titleConvo({ endpoint: endpointOption?.endpoint, text, response: responseMessage });
+      const title = await titleConvo({ text, response: responseMessage });
       await saveConvo(req?.session?.user?.username, {
         conversationId: conversationId,
         title

@@ -81,20 +81,6 @@ const getDefaultConversation = ({ conversation, prevConversation, endpointsConfi
     }
   }
 
-  // try {
-  //   // try to use current model
-  //   const { endpoint = null } = prevConversation || {};
-  //   if (endpointsConfig?.[endpoint]) {
-  //     conversation = buildDefaultConversation({
-  //       conversation,
-  //       endpoint,
-  //       lastConversationSetup: prevConversation,
-  //       endpointsConfig
-  //     });
-  //     return conversation;
-  //   }
-  // } catch (error) {}
-
   try {
     // try to read latest selected model from local storage
     const lastConversationSetup = JSON.parse(localStorage.getItem('lastConversationSetup'));

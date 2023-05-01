@@ -6,7 +6,7 @@ const tokenRefreshHints = atom({
 });
 
 const useToken = endpoint => {
-  const [hints, setHints] = useRecoilState(tokenRefreshHints);
+  const [_, setHints] = useRecoilState(tokenRefreshHints);
   const getToken = () => localStorage.getItem(`${endpoint}_token`);
   const saveToken = value => {
     localStorage.setItem(`${endpoint}_token`, value);

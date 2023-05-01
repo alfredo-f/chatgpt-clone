@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
   };
 
   const availableModels = getChatGPTBrowserModels();
-  if (availableModels.find((model) => model === endpointOption.model) === undefined)
+  if (availableModels.find(model => model === endpointOption.model) === undefined)
     return handleError(res, { text: 'Illegal request: model' });
 
   console.log('ask log', {
@@ -96,7 +96,7 @@ const ask = async ({
 
   try {
     let lastSavedTimestamp = 0;
-    const { onProgress: progressCallback, getPartialText } = createOnProgress({
+    const { onProgress: progressCallback, _ } = createOnProgress({
       onProgress: ({ text }) => {
         const currentTimestamp = Date.now();
         if (currentTimestamp - lastSavedTimestamp > 500) {

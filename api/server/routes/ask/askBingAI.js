@@ -109,7 +109,7 @@ const ask = async ({
 
   try {
     let lastSavedTimestamp = 0;
-    const { onProgress: progressCallback, getPartialText } = createOnProgress({
+    const { onProgress: progressCallback, _ } = createOnProgress({
       onProgress: ({ text }) => {
         const currentTimestamp = Date.now();
         if (currentTimestamp - lastSavedTimestamp > 500) {
@@ -160,7 +160,7 @@ const ask = async ({
       sender: endpointOption?.jailbreak ? 'Sydney' : 'BingAI',
       text: await handleText(response, true),
       suggestions:
-        response.details.suggestedResponses && response.details.suggestedResponses.map((s) => s.text),
+        response.details.suggestedResponses && response.details.suggestedResponses.map(s => s.text),
       unfinished: false,
       cancelled: false,
       error: false
@@ -227,7 +227,7 @@ const ask = async ({
     res.end();
 
     if (userParentMessageId == '00000000-0000-0000-0000-000000000000') {
-      const title = await titleConvo({ endpoint: endpointOption?.endpoint, text, response: responseMessage });
+      const title = await titleConvo({ text, response: responseMessage });
 
       await saveConvo(req?.session?.user?.username, {
         conversationId: conversationId,

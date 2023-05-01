@@ -42,7 +42,7 @@ router.get('/', async function (req, res) {
         },
         true
       )
-    ).hits.map(message => {
+    ).hits.map((message) => {
       const { _formatted, ...rest } = message;
       return {
         ...rest,
@@ -94,7 +94,7 @@ router.get('/clear', async function (req, res) {
 router.get('/test', async function (req, res) {
   const { q } = req.query;
   const messages = (await Message.meiliSearch(q, { attributesToHighlight: ['text'] }, true)).hits.map(
-    message => {
+    (message) => {
       const { _formatted, ...rest } = message;
       return { ...rest, searchResult: true, text: _formatted.text };
     }

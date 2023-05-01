@@ -4,6 +4,11 @@ module.exports = {
     node: true
   },
   extends: ['eslint:recommended'],
+  ignorePatterns: [
+    'node_modules/',
+    'dist/',
+    'data/'
+  ],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',

@@ -38,8 +38,6 @@ module.exports = {
     }
   },
   deletePresets: async (user, filter) => {
-    let toRemove = await Preset.find({ ...filter, user }).select('presetId');
-    const ids = toRemove.map(instance => instance.presetId);
     let deleteCount = await Preset.deleteMany({ ...filter, user }).exec();
     return deleteCount;
   }

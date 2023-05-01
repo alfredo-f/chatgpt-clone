@@ -17,7 +17,7 @@ const citeText = (res, noLinks = false) => {
 
   let sources = res.details.sourceAttributions;
   if (sources?.length === 0) return result;
-  sources = sources.map((source) => source.seeMoreUrl);
+  sources = sources.map(source => source.seeMoreUrl);
 
   citations.forEach((citation) => {
     const digit = citation.match(/\d+?/g)[0];

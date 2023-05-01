@@ -1,9 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { titleConvo } = require('../../app/');
-const { getConvo, saveConvo, getConvoTitle } = require('../../models');
+const { getConvo, saveConvo } = require('../../models');
 const { getConvosByPage, deleteConvos } = require('../../models/Conversation');
-const { getMessages } = require('../../models/Message');
 
 router.get('/', async (req, res) => {
   const pageNumber = req.query.pageNumber || 1;

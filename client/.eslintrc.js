@@ -11,6 +11,11 @@ module.exports = {
       "plugin:react/recommended",
       "plugin:react-hooks/recommended"
   ],
+  "ignorePatterns": [
+    'node_modules/',
+    'dist/',
+    'data/'
+  ],
   "overrides": [
   ],
   "parserOptions": {
